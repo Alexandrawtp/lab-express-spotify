@@ -1,0 +1,14 @@
+<div class="header">
+    <h1>Results for "{{input}}"</h1>
+</div>
+<div class="container-fluid">
+    {{#each data.body.artists.items}}
+    <div class="card" style="width: 18rem;">
+        <img src="{{this.images.0.url}}" class="card-img-top" alt="img">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
